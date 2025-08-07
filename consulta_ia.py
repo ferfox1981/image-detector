@@ -13,7 +13,7 @@ API_KEY = os.getenv("API_KEY")
 
 
 llm = ChatGroq(
-        temperature=0,
+    temperature=0,
     model="meta-llama/llama-4-scout-17b-16e-instruct",
     api_key=API_KEY
 )
@@ -23,6 +23,6 @@ messages = [
     HumanMessage(content="Me explique o autismo em uma sentença")
 ]
 
-output = llm.invoke(messages).content
+output = llm.invoke(messages)
 
-print(output)
+print(output.content)
